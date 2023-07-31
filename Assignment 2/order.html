@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizza Order Form</title>
+    <!--Link to the css file of the order page-->
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+    <header>
+        <!-- Add a header for the pizza ordering website -->
+        <h1>Pizza Order Form</h1>
+    </header>
+    <main>
+        <div class="container">
+            <div class="personal-info">
+                <!--Personal information section-->
+                <h2>Personal Information</h2>
+                <form id="personal-info-form">
+                    <div class="form-group">
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <!--Delivery or takeout -->
+                    <div class="form-group">
+                        <label for="phone">Phone:</label>
+                        <input type="tel" id="phone" name="phone" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="order-type" class="size">Order Type:</label>
+                        <div>
+                            <input type="radio" id="takeout" name="order-type" value="takeout" required>
+                            <label for="takeout">Takeout</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="delivery" name="order-type" value="delivery" required>
+                            <label for="delivery">Delivery</label>
+                        </div>
+                    </div>
+                    <!--Address Form-->
+                    <div class="container-hidden" id="delivery-address-form">
+                        <h2>Delivery Address</h2>
+                        <div class="form-group">
+                            <label for="street-name">Street Name:</label>
+                            <input type="text" id="street-name" name="street-name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="city">City:</label>
+                            <input type="text" id="city" name="city" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="state">State:</label>
+                            <input type="text" id="state" name="state" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="pincode">Pincode:</label>
+                            <input type="text" id="pincode" name="pincode" required>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="pizza-options">
+                <h2>Pizza Options</h2>
+                <form id="order-form">
+                    <div class="form-group">
+                        <!--Pizza selection-->
+                        <label for="pizza-type">Pizza Type:</label>
+                        <select id="pizza-type" name="pizza-type" required>
+                            <option value="" disabled selected>Select a pizza type</option>
+                            <option value="pepperoni">Hawaiian Pizza</option>
+                            <option value="margherita">Pepperoni Pizza</option>
+                            <option value="supreme">Veggie Delight Pizza</option>
+                            <option value="vegetarian">Basil Meat Pizza</option>
+                            <option value="custom">Create Your Own Pizza</option>
+                            <!-- Add more pizza types here -->
+                        </select>
+                    </div>
+                    <!--Seperate form for create your own pizza -->
+                    <div id="create-your-own-section" class="form-group hidden">
+                        <label for="pizza-type" class="size">Dough Type:</label>
+                        <select id="dough-type" name="dough-type" required>
+                            <option value="" disabled selected>Select a dough type</option>
+                            <option value="regular">Regular</option>
+                            <option value="thincrust">Thin Crust</option>
+                        </select>
+
+                        <label class="size">Choose Your Toppings:</label>
+                        <div>
+                            <input type="checkbox" id="cheese" name="toppings" value="Extra Cheese">
+                            <label for="cheese">Extra Cheese</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="pepperoni" name="toppings" value="Extra Pepperoni">
+                            <label for="pepperoni">Extra Pepperoni</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="mushrooms" name="toppings" value="Mushrooms">
+                            <label for="mushrooms">Mushrooms</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="bellpepper" name="toppings" value="Bell Pepper">
+                            <label for="Bell Pepper">Bell Pepper</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="onions" name="toppings" value="Onions">
+                            <label for="Onions">Onions</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="tomatoes" name="toppings" value="Tomatoes">
+                            <label for="Tomatoes">Tomatoes</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="olives" name="toppings" value="Olives">
+                            <label for="Olives">Olives</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="bananapepper" name="toppings" value="Banana Pepper">
+                            <label for="Banana Pepper">Banana Pepper</label>
+                        </div>
+                    </div>
+                    <!--Size selection-->
+                    <div class="form-group">
+                        <label class="size">Size:</label>
+                        <div>
+                            <input type="radio" id="small" name="size" value="small" required>
+                            <label for="small">Small</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="medium" name="size" value="medium" required>
+                            <label for="medium">Medium</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="large" name="size" value="large" required>
+                            <label for="large">Large</label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="quantity" class="size">Quantity:</label>
+                        <input type="number" id="quantity" name="quantity" min="1" max="10" required>
+                    </div>
+                    <div class="form-group">
+                        <div>
+                            <input type="checkbox" id="cheese" name="toppings" value="cheese">
+                            <label for="cheese">Extra Cheese</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="pepperoni" name="toppings" value="pepperoni">
+                            <label for="pepperoni">Extra Pepperoni</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="mushrooms" name="toppings" value="mushrooms">
+                            <label for="mushrooms">Mushrooms</label>
+                        </div>
+                    </div>
+                </form>
+            </div> 
+        </main>
+        <!--Order Button-->
+        <div class="center-button">
+            <a href="confirm.html" class="order-button"   onclick="placeOrder()">Place Order</a>
+        </div>
+    <footer>
+        <!-- Add a footer for the pizza ordering website -->
+        <p>&copy; 2023 Pizza Place. All rights reserved.</p>
+    </footer>
+    <!--Script for showing option when user choose create your own pizza-->
+    <script>
+        const pizzaTypeSelect = document.getElementById('pizza-type');
+        const createYourOwnSection = document.getElementById('create-your-own-section');
+    
+        pizzaTypeSelect.addEventListener('change', function() {
+            if (this.value === 'custom') {
+                createYourOwnSection.classList.remove('hidden');
+            } else {
+                createYourOwnSection.classList.add('hidden');
+            }
+        });
+    </script>
+
+    <!--Script for validation-->
+     <script>
+        function placeOrder() {
+            // Check if the personal information fields are filled in
+            const personalInfoForm = document.getElementById('personal-info-form');
+            const requiredFields = personalInfoForm.querySelectorAll('input[required]');
+            let isFormValid = true;
+
+            requiredFields.forEach(field => {
+                if (field.value.trim() === '') {
+                    field.style.border = '1px solid red';
+                    isFormValid = false;
+                } else {
+                    field.style.border = '1px solid #ccc';
+                }
+            });
+
+            // Check if a size is selected
+            const sizeRadios = document.getElementsByName('size');
+            let isSizeSelected = false;
+
+            sizeRadios.forEach(radio => {
+                if (radio.checked) {
+                    isSizeSelected = true;
+                }
+            });
+
+            if (!isSizeSelected) {
+                alert("Please select a pizza size before placing the order.");
+                isFormValid = false;
+            }
+
+            // Check if quantity is provided
+            const quantityInput = document.getElementById('quantity');
+            if (quantityInput.value.trim() === '') {
+                quantityInput.style.border = '1px solid red';
+                alert("Please enter the quantity before placing the order.");
+                isFormValid = false;
+            } else {
+                quantityInput.style.border = '1px solid #ccc';
+            }
+
+            // If any required fields are empty or size/quantity is not selected, prevent form submission
+            if (!isFormValid) {
+                event.preventDefault();
+            }
+        }
+    </script>
+
+    <script>
+        const orderTypeRadios = document.getElementsByName('order-type');
+        const deliveryAddressForm = document.getElementById('delivery-address-form');
+
+        orderTypeRadios.forEach(radio => {
+        radio.addEventListener('change', function () {
+        if (this.value === 'delivery') {
+            deliveryAddressForm.classList.remove('hidden');
+        } else {
+            deliveryAddressForm.classList.add('hidden');
+        }
+        });
+       });
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+

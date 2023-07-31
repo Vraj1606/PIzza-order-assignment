@@ -1,0 +1,175 @@
+body, h1, h2, h3, p, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f7f7f7;
+    color: #333;
+
+}
+
+/* Header Styles */
+header {
+    position: relative; /* Set the header as a positioned container */
+    background-image: url("../img/pizzalogo1.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 300px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #f2f2f2; 
+  }     
+.logo-image {
+    max-width: 100px;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+/* Main Content Styles */
+main {
+    padding: 2rem;
+    align-content: center;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.size {
+font-size: 25px;
+font-weight: bolder;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 0.5rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+select {
+    appearance: none;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+textarea {
+    resize: vertical;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Hide the "Create Your Own Pizza" section initially */
+.hidden {
+    display: none;
+}
+
+/* Radio and Checkbox Styles */
+div > input[type="radio"],
+div > input[type="checkbox"] {
+   margin-right: 0.5em;
+    vertical-align: middle;
+}
+
+/* Order Button Styles */
+.order-button {
+    background-color: #ff8c00;
+    color: #fff;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.order-button:hover {
+    background-color: #e65c00;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+
+.container {
+    display: flex;
+}
+
+.pizza-options {
+    flex: 1;
+    padding-left: 2rem;
+}
+
+.personal-info {
+    flex: 1;
+    padding-left: 2rem;
+}
+
+/* Additional styles for proper spacing and alignment */
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+h2 {
+    margin-bottom: 1rem;
+}
+
+.pizza-options label,
+.personal-info label {
+    display: flex; 
+    align-items: center;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.pizza-options select,
+.pizza-options input[type="radio"],
+.pizza-options input[type="checkbox"],
+.personal-info input,
+.personal-info textarea {
+    margin: 0 0.5rem 0 0; 
+    -webkit-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0);
+}
+
+.pizza-options select {
+    appearance: none;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+.pizza-options textarea {
+    resize: vertical;
+}
+
+.center-button {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+    margin-bottom: 1em;
+}
